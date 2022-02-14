@@ -1,0 +1,21 @@
+.course{
+    background-color: #808080;
+}
+.course h1{
+    padding:1rem 2rem;
+    background-color: #effeff;
+}
+.box{
+    padding:1rem 1.5rem;
+    background-color: #efefef;
+}
+.image-container{
+    width:230px;
+    height:200px;
+    text-align:center;
+}
+.image-container img{
+    object-position:center;
+    object-fit:cover;
+    width:100%; 
+}

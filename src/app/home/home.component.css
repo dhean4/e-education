@@ -1,0 +1,35 @@
+.home img{
+    width:100%;
+    height:85vh;
+    object-position:center;
+    object-fit:cover;
+}
+.home-content{
+    position:absolute;
+    top:50%;
+    left:40%;
+    transform:translate(-50%,-50%)
+}
+.home-content-h2{
+    font-weight:600px;
+    font-size:3.5rem;
+    color:#fff;
+    line-height:1.5;
+}
+.home-content a{
+    margin:0.6rem 1rem;
+}
+.home-content a .btn-light:hover{
+    margin:0.6rem 1rem;
+    background-color: #000;
+}
+@media screen and (max-width:560px){
+    .home img{
+        height: 700px;;
+    }
+    .home-content h1{
+        font-size:3rem;
+    }
+
+    
+}

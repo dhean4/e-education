@@ -1,0 +1,18 @@
+.navbar{
+    background-color:#fff;
+}
+.navbar-light .navbar-nav .nav-link{
+    color:#000;
+    font-size:1rem;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    text-decoration:underline;
+}
+.footer{
+    text-align:center;
+    color:#000;
+    font-size:18px;
+}
+.footer a{
+    color:#000;
+}

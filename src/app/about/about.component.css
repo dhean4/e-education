@@ -1,0 +1,21 @@
+.about-us{
+    background-color: #A9A9A9;
+    padding:5rem 0 10rem ;
+
+}
+.style-about{
+    display:flex;
+    flex-direction:column;
+    flex-wrap:nowrap;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    font-size: 18px;
+    line-height:1.5;
+}
+.about-us-heading span{
+    color:#000;
+}
+button{
+    margin-top:1.5rem;
+}
