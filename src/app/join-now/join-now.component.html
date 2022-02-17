@@ -1,13 +1,33 @@
 <section class="join-now">
     <div class="login col-lg-4 mx-auto shadow-lg">
-        <form>
+        <form [formGroup]="JoinUs" (ngSubmit)="EnrollNow()">
+          <!-- Adding first Name -->
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">UserName</label>
+            <input type="text" formControlName="firstName" class="form-control">
+          </div>
+          <!-- displying username error message -->
+          <div *ngIf="UserName.invalid && (UserName.touched || UserName.dirty)">
+            <span class="error" *ngIf="UserName.errors?.required">*UserName is required</span>
+            <span class="error" *ngIf="UserName.errors?.Pattern">*Username must be a string</span>
+          </div>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input type="email" formControlName="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <!-- Display email error message -->
+            <div *ngIf="Email.invalid && (Email.touched || Email.dirty)">
+              <span class="error" *ngIf="Email.errors?.required">*Email is required</span>
+              <span class="error" *ngIf="Email.errors?.email">*Enter a valid email address</span>
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
+              <input type="password" formControlName="Password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <!-- Display password error message -->
+            <div *ngIf="Password.invalid && (Password.touched || Password.dirty)">
+              <span class="error" *ngIf="Password.errors?.required">*Password is required</span>
+              <span class="error" *ngIf="Password.errors?.password">*Enter a Unique and strong Password</span>
             </div>
             <button type="submit" class="btn btn-primary col-lg-12">Enroll Now!</button>
           </form>     

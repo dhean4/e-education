@@ -1,21 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+:root {
+  --primary-color: #22254b;
+  --secondary-color: #373b69;
+}
+
+body{
+    background-color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+header {
+  padding: 2rem;
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  background-color: var(--secondary-color);
+  top:5%; left: 0;
+}
+header h3{
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight:1rem;
+    color:#000;
+    margin-left:1.5rem;
+}
+header a span{
+    color:black;
+
+}
+@media screen and (max-width:600px){
+    header {
+        padding: 2rem;
+        width:100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        background-color: var(--secondary-color);
+        top:5%; left: 0;
+      }
+      header h3{
+          display:none;
+      }
+     form{
+         display:flex;
+         justify-content:space-between;
+         align-items:center;
+     }       
+}
 .course{
-    background-color: #808080;
+    background-color: var(--primary-color);
 }
-.course h1{
-    padding:1rem 2rem;
-    background-color: #effeff;
+
+.search {
+  background-color: transparent;
+  border: 2px solid #22254b;
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: #fff;
 }
-.box{
-    padding:1rem 1.5rem;
-    background-color: #efefef;
+
+.search::placeholder {
+  color: #000;
 }
-.image-container{
-    width:230px;
-    height:200px;
-    text-align:center;
+
+.search:focus {
+  outline: none;
+  background-color: var(--primary-color);
+  color:#000;
 }
-.image-container img{
-    object-position:center;
-    object-fit:cover;
-    width:100%; 
+
+.button{
+    background-color: #000;
+    position:relative;
+    padding:0.5rem 1rem;
+    border:none;
+    border-radius:15px;
+    color:#fff;
+    margin-right:2rem;
+    cursor:pointer;
+}
+
+.button:hover{
+    color:rgba(255,255,255,0.3);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top:4rem !important;
+  }
+.book{
+  width: 250px;
+  margin: 1rem;
+  background-color: var(--secondary-color);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+} 
+
+.book img {
+  width: 100%;
+}
+
+.book-info {
+  color: #000;
+  padding: 0.5rem 1rem 0 0;
+  letter-spacing: 0.5px;
+}
+.book-info h2 {
+  margin-top: 0;
+}
+
+.description {
+  background-color: #fff;
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  overflow-y: auto;
+  transition: transform 0.3s ease-in;
+}
+
+.book:hover .description {
+  transform: translateY(0);
+}
+/* nav button button option */
+.load{
+  margin:3rem;
+  display:flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+  background-color: var(--primary-color);
+}
+
+.load .prev{
+  padding:0.5rem 1rem;
+  color:var(--secondary-color);
+  background-color: #fff;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+}
+.load .prev:hover{
+  padding:0.5rem 1rem;
+  background-color: var(--secondary-color);
+  border:none;
+  border-radius:10px;
+  transition:0.2s;
+  cursor:pointer;
+
+}
+
+.load .next{
+  padding:0.5rem 1rem;
+  color: var(--secondary-color);
+  background-color: #fff;
+    border:none;
+  border-radius:10px;
+  cursor:pointer;
+
+}
+.load .next:hover{
+  padding:0.5rem 1rem;
+  background-color: var(--secondary-color);
+  border-radius:10px;
+  transition:0.2s;
+  cursor:pointer;
+}
+
+.loading{
+  background-color: #fff;
+  margin:2rem;
+  display:flex;
+  justify-content:center;
+  padding:2rem 1rem;
 }
